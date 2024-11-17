@@ -31,6 +31,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/cart/add', [ShoppingCartController::class, 'addToCart']);
     Route::post('/cart/checkout', [ShoppingCartController::class, 'checkout']);
     Route::post('/apply-discount', [DiscountController::class, 'applyDiscount']);
+    Route::get('/user/profile', [UserController::class, 'show']);
+    Route::post('/user/update', [UserController::class, 'update']);
 });
 
 Route::get('/products', [ProductController::class, 'index']);

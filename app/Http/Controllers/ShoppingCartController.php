@@ -61,7 +61,6 @@ class ShoppingCartController extends Controller
             'code' => 'DISCOUNT' . $order->id,
             'amount' => 5.00,
             'user_id' => $request->user()->id,
-            'expiry_date' => now()->addMinutes(15),
         ]);
 
         $cart->items()->delete();

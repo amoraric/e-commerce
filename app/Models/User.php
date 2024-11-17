@@ -20,6 +20,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'address',
+        'phone',
     ];
 
     public function shoppingCart()
